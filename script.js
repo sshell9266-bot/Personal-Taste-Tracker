@@ -28,8 +28,8 @@ function printFoodRecommendation(foodName) {
     console.log("Trust me — " + foodName + " is delicious.");
 }
 
-// 4b. Call the function at least 3 times
 
+// 4b. Call the function at least 3 times
 printFoodRecommendation("Sushi");
 printFoodRecommendation("Tacos");
 printFoodRecommendation("Seafood");
@@ -41,15 +41,21 @@ let friendFavorites = [
   ];
 
 // 5. Print out only foods that have an "a" in the name. For example, "Pizza" would not be included, but "Donuts" would be.
-
+friendFavorites.forEach((food) => {
+  if (food.includes("a")) {
+    console.log(food);
+  }
+});
 
 
 // 6. Store the result in an array called foodsWithA. Print out the array.
-
+let foodsWithA = friendFavorites.filter((food) => food.includes("a"));
+console.log("Foods with 'a' in the name:");
+console.log(foodsWithA);
 
 
 // 7. Create a new array longFoodNames for foods with names longer than 6 characters.
-
+let longFoodNames = friendFavorites.filter((food) => food.length > 6);
 
 
 // 8. Create another array shortFoodNames for foods 6 characters or shorter.
